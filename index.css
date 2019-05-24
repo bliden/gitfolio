@@ -211,8 +211,13 @@ body{
 #profile_img {
     width:180px;
     height:180px;
+    min-width:180px;
+    min-height:180px;
+    max-width:180px;
+    max-height:180px;
     border-radius:5px;
     background-size:cover !important;
+    background-repeat:no-repeat !important;
 }
 
 #profile div {
@@ -270,9 +275,7 @@ body{
 }
 
 .projects {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 2rem 1rem;
+    columns:2;
 }
 
 .projects section {
@@ -284,9 +287,8 @@ body{
     border:1px solid rgb(0, 0, 0, 0.08);
     box-shadow:0px 0px 0px rgb(0, 0, 0, 0);
     transition:0.4s ease-in-out;
+    margin:2vh 0px;
     transform:scale(1);
-    /* height calculated to compensate for padding */
-    height: calc(100% - 5vh); 
 }
 
 .projects section:hover {
@@ -294,9 +296,6 @@ body{
     border:1px solid rgb(0, 0, 0, 0);
     box-shadow:0px 15px 35px rgb(0, 0, 0, 0.06);
     transform:scale(1.03);
-}
-
-.projects a {
 }
 
 .section_title {
@@ -399,18 +398,20 @@ body{
     #profile_img {
         width:120px;
         height:120px;
+        min-width:120px;
+        min-height:120px;
+        max-width:120px;
+        max-height:120px;
         margin:0px auto !important;
     }
     #work {
         margin:0px;
     }
     .projects {
-        grid-template-columns: unset;
+        columns:1;
     }
     .projects section {
         width:88%;
-    }
-    .projects a {
     }
     #blogs {
         columns:1;
